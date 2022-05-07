@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>轮播图</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrap">
+        <li class="active"><img src="/image/1.jpg" alt="" /></li>
+        <li><img src="/image/2.jpg" alt="" /></li>
+        <li><img src="/image/3.jpg" alt="" /></li>
+        <li><img src="/image/4.jpg" alt="" /></li>
+      </div>
+      <a href="javascript:;" class="next"></a>
+      <a href="javascript:;" class="prev"></a>
+      <div class="bottom-button">
+        <a href="javascript:;" class="show"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+      </div>
+    </div>
+    <!-- <script src="/js/index.js"></script> -->
+    <!-- <script src="/js/class.js"></script> -->
+    <script type="module">
+      import { BaseLine } from "/js/class.js";
+      class Circle extends BaseLine {
+        constructor(container, next, prev, list, alist) {
+          super(container, next, prev, list, alist);
+        }
+      }
+      const circleOne = new Circle(
+        "container",
+        "next",
+        "prev",
+        "wrap",
+        "bottom-button"
+      );
+      circleOne.start();
+    </script>
+  </body>
+</html>
